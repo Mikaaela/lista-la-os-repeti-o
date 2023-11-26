@@ -1,0 +1,47 @@
+#include<stdio.h>
+
+int main() {
+    int voto, candidato1 = 0, candidato2 = 0, candidato3 = 0, candidato4 = 0, nulos = 0, brancos = 0;
+  
+    printf("Informe o voto (1 a 4 para candidatos, 5 para voto nulo, 6 para voto em branco, 0 para finalizar): ");
+    scanf("%d", &voto);
+  
+    while(voto != 0) {
+        switch(voto) {
+            case 1:
+                candidato1++;
+                break;
+            case 2:
+                candidato2++;
+                break;
+            case 3:
+                candidato3++;
+                break;
+            case 4:
+                candidato4++;
+                break;
+            case 5:
+                nulos++;
+                break;
+            case 6:
+                brancos++;
+                break;
+            default:
+                printf("Codigo invalido. Tente novamente.");
+                break;
+        }
+      
+        printf("Informe o voto (1 a 4 para candidatos, 5 para voto nulo, 6 para voto em branco, 0 para finalizar): ");
+        scanf("%d", &voto);
+    }
+  
+    printf("Total de votos:");
+    printf("Candidato 1: %d", candidato1);
+    printf("Candidato 2: %d", candidato2);
+    printf("Candidato 3: %d", candidato3);
+    printf("Candidato 4: %d", candidato4);
+    printf("Nulos: %d", nulos);
+    printf("Brancos: %d", brancos);
+  
+    return 0;
+}

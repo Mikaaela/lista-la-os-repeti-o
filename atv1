@@ -1,0 +1,13 @@
+#include <stdio.h>
+int main() { 
+    int soma = 0;
+    int quantidade = 0;
+    int numero;
+
+do { printf("Digite um numero: "); scanf("%d", &numero);
+
+if (numero % 2 == 0 && numero != 0) { soma += numero; quantidade++; } } while (numero != 0);
+
+if (quantidade == 0) { printf("Nenhum numero par foi digitado.\n"); } else { float media = (float)soma / quantidade; printf("A media dos numeros pares digitados: %.2f ", media); }
+
+return 0; } 

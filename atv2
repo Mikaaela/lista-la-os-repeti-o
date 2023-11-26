@@ -1,0 +1,12 @@
+#include <stdio.h>
+int main() { 
+    int numero, soma = 0, contador = 0;
+     float media;
+
+do { printf("Digite um número positivo (ou negativo para sair): "); scanf("%d", &numero);
+
+if (numero >= 0) { soma += numero; contador++; } } while (numero >= 0);
+
+if (contador == 0) { printf("Nenhum número válido foi inserido.\n"); } else { media = (float) soma / contador; printf("A média dos números inseridos é: %.2f ", media); }
+
+return 0; }
